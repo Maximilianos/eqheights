@@ -1,0 +1,30 @@
+{
+  "name": "equalizeheights",
+  "version": "1.0.0",
+  "description": "Give all elements in a group of elements at least the height of the tallest element within that group",
+  "main": "equalizeHeights.js",
+  "scripts": {
+    "compile": "babel equalizeHeights.js --modules umd --out-file dist/equalizeHeights.js",
+    "minify": "uglifyjs dist/equalizeHeights.js --compress --screw-ie8 --mangle --output dist/equalizeHeights.min.js",
+    "build": "npm run compile && npm run minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maximilianos/equalizeHeights.git"
+  },
+  "keywords": [
+    "equalize",
+    "heights",
+    "dom"
+  ],
+  "author": "Max GJ Panas <m@maxpanas.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Maximilianos/equalizeHeights/issues"
+  },
+  "homepage": "https://github.com/Maximilianos/equalizeHeights#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "uglify-js": "^2.4.24"
+  }
+}
