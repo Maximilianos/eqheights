@@ -4,15 +4,15 @@ Give all elements in a group of elements at least the height of the tallest elem
 
 ## Usage
 
-	```javascript
-	// using a selector string
-	eqheights('.grid-items');
-	
-	// or using a NodeList
-	const elements = document.querySelectorAll('.list-items');
+```javascript
+// using a selector string
+eqheights('.grid-items');
 
-	eqheights(elements);
-	```
+// or using a NodeList
+const elements = document.querySelectorAll('.list-items');
+
+eqheights(elements);
+```
 
 ## License
 
