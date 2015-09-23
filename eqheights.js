@@ -34,9 +34,9 @@ function setMinHeight(nodeArray, height) {
  * @param nodes NodeList|string
  * @returns {{clear}}
  */
-export default function equalizeHeights(nodes) {
+export default function eqheights(nodes) {
 	if ('string' !== typeof nodes && !(nodes instanceof NodeList && nodes.constructor === NodeList)) {
-		throw new TypeError('equalizeHeights expects either a selector string or a NodeList as input.');
+		throw new TypeError('eqheights expects either a selector string or a NodeList as input.');
 	}
 
 	const nodeList = 'string' === typeof nodes
