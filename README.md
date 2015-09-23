@@ -13,6 +13,8 @@ npm i eqheights
 ## Usage
 
 ```javascript
+import eqheights from 'eqheights';
+
 // using a selector string
 eqheights('.grid-items');
 
