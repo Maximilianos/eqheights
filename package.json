@@ -13,9 +13,12 @@
     "url": "https://github.com/Maximilianos/eqheights.git"
   },
   "keywords": [
+    "element",
+    "elements",
+    "equal",
     "equalize",
     "heights",
-    "dom"
+    "height"
   ],
   "author": "Max GJ Panas <m@maxpanas.com>",
   "license": "MIT",

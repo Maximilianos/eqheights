@@ -17,8 +17,8 @@ function getMaxHeight(nodeArray) {
  * Set the minHeight of each
  * node in an array of nodes
  *
- * @param nodeArray
- * @param height
+ * @param nodeArray array
+ * @param height number|string
  */
 function setMinHeight(nodeArray, height) {
 	nodeArray.forEach(node => {
