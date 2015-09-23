@@ -8,7 +8,7 @@
       exports: {}
     };
     factory(mod.exports, mod);
-    global.equalizeHeights = mod.exports;
+    global.eqheights = mod.exports;
   }
 })(this, function (exports, module) {
   /**
@@ -21,7 +21,7 @@
    */
   'use strict';
 
-  module.exports = equalizeHeights;
+  module.exports = eqheights;
 
   function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i]; return arr2; } else { return Array.from(arr); } }
 
@@ -53,9 +53,9 @@
    * @returns {{clear}}
    */
 
-  function equalizeHeights(nodes) {
+  function eqheights(nodes) {
     if ('string' !== typeof nodes && !(nodes instanceof NodeList && nodes.constructor === NodeList)) {
-      throw new TypeError('equalizeHeights expects either a selector string or a NodeList as input.');
+      throw new TypeError('eqheights expects either a selector string or a NodeList as input.');
     }
 
     var nodeList = 'string' === typeof nodes ? document.querySelectorAll(nodes) : nodes;
