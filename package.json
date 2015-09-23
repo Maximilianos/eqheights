@@ -1,6 +1,6 @@
 {
   "name": "eqheights",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Give all elements in a group of elements at least the height of the tallest element within that group",
   "main": "eqheights.js",
   "scripts": {
