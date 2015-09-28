@@ -2,7 +2,7 @@
   "name": "eqheights",
   "version": "1.0.3",
   "description": "Give all elements in a group of elements at least the height of the tallest element within that group",
-  "main": "eqheights.js",
+  "main": "dist/eqheights.js",
   "scripts": {
     "transpile": "babel eqheights.js --modules umd --out-dir dist",
     "minify": "uglifyjs dist/eqheights.js --compress --screw-ie8 --mangle --output dist/eqheights.min.js",
