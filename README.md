@@ -26,4 +26,4 @@ eqheights(elements);
 
 ## License
 
-MIT
+MIT © [Max GJ Panas](maxpanas.com)
