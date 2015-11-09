@@ -29,6 +29,19 @@ function setMinHeight(nodeArray, height) {
 
 /**
  * Equalize the Heights of
+ * a group of elements in
+ * a nodeArray
+ *
+ * @param nodeArray
+ */
+function equalizeHeights(nodeArray) {
+	const maxHeight = getMaxHeight(nodeArray) + 'px';
+	setMinHeight(nodeArray, maxHeight);
+}
+
+
+/**
+ * Equalize the Heights of
  * a group of elements
  *
  * @param nodes NodeList|string
@@ -44,11 +57,31 @@ export default function eqheights(nodes) {
 		: nodes;
 
 	const nodeArray = [...nodeList];
-	const maxHeight = getMaxHeight(nodeArray) + 'px';
 
-	setMinHeight(nodeArray, maxHeight);
+	equalizeHeights(nodeArray);
+
+	/**
+	 * Clear all min-heights
+	 * set on element's style
+	 * tag
+	 *
+	 */
+	function clear() {
+		setMinHeight(nodeArray, '');
+	}
 
 	return {
-		clear: () => setMinHeight(nodeArray, 0)
-	}
+		clear,
+
+		/**
+		 * Reset all min-heights
+		 * and re-equalize the
+		 * elements
+		 *
+		 */
+		recalc() {
+			clear();
+			equalizeHeights(nodeArray);
+		}
+	};
 }
