@@ -45,9 +45,10 @@ function equalizeHeights(nodeArray) {
  * a group of elements
  *
  * @param nodes NodeList|string
+ * @param autorun bool
  * @returns {{clear}}
  */
-export default function eqheights(nodes) {
+export default function eqheights(nodes, {autorun = true} = {}) {
 	if ('string' !== typeof nodes && !(nodes instanceof NodeList && nodes.constructor === NodeList)) {
 		throw new TypeError('eqheights expects either a selector string or a NodeList as input.');
 	}
@@ -58,7 +59,9 @@ export default function eqheights(nodes) {
 
 	const nodeArray = [...nodeList];
 
-	equalizeHeights(nodeArray);
+	if (autorun) {
+		equalizeHeights(nodeArray);
+	}
 
 	/**
 	 * Clear all min-heights

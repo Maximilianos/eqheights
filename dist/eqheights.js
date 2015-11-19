@@ -62,10 +62,16 @@
   * a group of elements
   *
   * @param nodes NodeList|string
+  * @param autorun bool
   * @returns {{clear}}
   */
 
 	function eqheights(nodes) {
+		var _ref2 = arguments.length <= 1 || arguments[1] === undefined ? {} : arguments[1];
+
+		var _ref2$autorun = _ref2.autorun;
+		var autorun = _ref2$autorun === undefined ? true : _ref2$autorun;
+
 		if ('string' !== typeof nodes && !(nodes instanceof NodeList && nodes.constructor === NodeList)) {
 			throw new TypeError('eqheights expects either a selector string or a NodeList as input.');
 		}
@@ -74,7 +80,9 @@
 
 		var nodeArray = [].concat(_toConsumableArray(nodeList));
 
-		equalizeHeights(nodeArray);
+		if (autorun) {
+			equalizeHeights(nodeArray);
+		}
 
 		/**
    * Clear all min-heights
